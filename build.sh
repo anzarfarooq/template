@@ -57,4 +57,4 @@ git clone https://github.com/duckyduckG/android_device_qcom_sepolicy_vndr.git -b
 
 # lineageos-brunch
 source build/envsetup.sh
-brunch berylliump
+brunch beryllium
