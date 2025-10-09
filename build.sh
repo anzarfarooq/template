@@ -32,12 +32,12 @@ rm -rf device/qcom/sepolicy_vndr/legacy-um
 # Clone repositories #
 
 # Device tree
-git clone https://github.com/duckyduckG/android_device_xiaomi_beryllium_419.git -b lineage-22.2 device/xiaomi/beryllium
-git clone https://github.com/duckyduckG/android_device_xiaomi_sdm845-common_419.git -b lineage-22.2 device/xiaomi/sdm845-common
+git clone https://github.com/duckyduckG/android_device_xiaomi_beryllium_419.git -b lineage-23.0 device/xiaomi/beryllium
+git clone https://github.com/duckyduckG/android_device_xiaomi_sdm845-common_419.git -b lineage-23.0 device/xiaomi/sdm845-common
 
 # Vendor
-git clone https://github.com/duckyduckG/android_vendor_xiaomi_beryllium_419.git -b lineage-22.2 vendor/xiaomi/beryllium
-git clone https://github.com/duckyduckG/android_vendor_xiaomi_sdm845-common_419.git -b lineage-22.2 vendor/xiaomi/sdm845-common
+git clone https://github.com/duckyduckG/android_vendor_xiaomi_beryllium_419.git -b lineage-23.0 vendor/xiaomi/beryllium
+git clone https://github.com/duckyduckG/android_vendor_xiaomi_sdm845-common_419.git -b lineage-23.0 vendor/xiaomi/sdm845-common
 
 # Kernel
 git clone https://github.com/duckyduckG/android_kernel_xiaomi_sdm845_419.git -b perf kernel/xiaomi/sdm845
@@ -48,7 +48,7 @@ git clone https://github.com/duckyduckG/devicetree_xiaomi_419.git kernel/xiaomi/
 git clone https://github.com/duckyduckG/devicetree_qcom-sdm845_419.git kernel/xiaomi/sdm845/arch/arm64/boot/dts/qcom-sdm845
 
 # Hardware
-git clone https://github.com/duckyduckG/android_hardware_xiaomi.git -b lineage-22.2 hardware/xiaomi
+git clone https://github.com/duckyduckG/android_hardware_xiaomi.git -b lineage-23.0 hardware/xiaomi
 
 # Hals
 git clone https://github.com/duckyduckG/media.git hardware/qcom-caf/sdm845/media
@@ -56,8 +56,8 @@ git clone https://github.com/duckyduckG/audio.git hardware/qcom-caf/sdm845/audio
 git clone https://github.com/duckyduckG/display.git hardware/qcom-caf/sdm845/display
 
 # Sepolicy
-git clone https://github.com/duckyduckG/android_device_lineage_sepolicy.git -b lineage-22.2 device/lineage/sepolicy
-git clone https://github.com/duckyduckG/android_device_qcom_sepolicy_vndr.git -b lineage-22.2-legacy-um device/qcom/sepolicy_vndr/legacy-um
+git clone https://github.com/duckyduckG/android_device_lineage_sepolicy.git -b lineage-23.0 device/lineage/sepolicy
+git clone https://github.com/duckyduckG/android_device_qcom_sepolicy_vndr.git -b lineage-23.0-legacy-um device/qcom/sepolicy_vndr/legacy-um
 
 # lineageos-brunch
 source build/envsetup.sh
