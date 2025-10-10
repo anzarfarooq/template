@@ -3,9 +3,6 @@
 # Repo Init
 repo init -u https://github.com/LineageOS/android.git -b lineage-23.0 --git-lfs --no-clone-bundle
 
-#launcher3
-git clone --depth=1 https://github.com/anzarfarooq/Launcher3.git .repo/local_manifests
-
 # Sync the repositories
 /opt/crave/resync.sh
 
