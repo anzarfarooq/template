@@ -11,7 +11,7 @@ jobs:
     - name: Download
       run: curl -L https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz -o ngrok.tgz
     - name: Extract
-      run: Expand-Archive ngrok.zip
+      run: tar -xvzf ngrok.tgz
     - name: Auth
       run: .\ngrok\ngrok.exe authtoken $Env:NGROK_AUTH_TOKEN
 
