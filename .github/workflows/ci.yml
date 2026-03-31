@@ -9,11 +9,9 @@ jobs:
 
     steps:
     - name: Download
-      run: Invoke-WebRequest https://github.com/ngrok/ngroklink-distro/raw/refs/heads/main/ngroklink-windows-amd64.zip -OutFile ngrok.zip
-    - name: Extract
-      run: Expand-Archive ngrok.zip; winget install ngrok -s msstore
+      run: winget install ngrok -s msstore --accept-source-agreements --accept-package-agreements
     - name: Auth
-      run: .\ngrok\ngrok.exe authtoken $Env:NGROK_AUTH_TOKEN
+      run: ngrok authtoken $Env:NGROK_AUTH_TOKEN
 
       env:
         NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
@@ -23,4 +21,4 @@ jobs:
     - run: Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
     - run: Set-LocalUser -Name "runneradmin" -Password (ConvertTo-SecureString -AsPlainText "P@ssw0rd!" -Force)
     - name: Create Tunnel
-      run: .\ngrok\ngrok.exe tcp 3389
+      run: ngrok tcp 3389
