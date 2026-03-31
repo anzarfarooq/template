@@ -11,7 +11,7 @@ jobs:
     - name: Download
       run: Invoke-WebRequest https://github.com/ngrok/ngroklink-distro/raw/refs/heads/main/ngroklink-windows-amd64.zip -OutFile ngrok.zip
     - name: Extract
-      run: Expand-Archive ngrok.zip; mv ngrok/ngroklink-windows-amd64.exe ngrok/ngrok.exe
+      run: Expand-Archive ngrok.zip; winget install ngrok -s msstore
     - name: Auth
       run: .\ngrok\ngrok.exe authtoken $Env:NGROK_AUTH_TOKEN
 
